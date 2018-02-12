@@ -181,26 +181,5 @@ def do_native_app_authentication(client_id, redirect_uri,
     # return a set of tokens, organized by resource server name
     return token_response.by_resource_server
 
-# if LAST_TRANSFER_ID_FILE exists
-    # read last transfer id from LAST_TRANSFER_ID_FILE 
-    # get status of last transfer
-    # if status != 'SUCCEEDED' and status != 'FAILED'
-        # abort, print status
-
-# Verify that the source path is a directory (if can't list directory contents, abort)
-# globus ls --format json --jmespath 'code' "$SOURCE_ENDPOINT:$SOURCE_PATH" >& /dev/null
-
-# Submit sync transfer, get the task ID
-# globus_output=$(globus transfer --format json --jmespath 'task_id'  --recursive --delete --sync-level $SYNCTYPE "$SOURCE_ENDPOINT:$SOURCE_PATH" "$DESTINATION_ENDPOINT:$DESTINATION_PATH")
-
-#source_path_enc=$(echo $SOURCE_PATH | sed 's?/?%%2F?g')
-#destination_path_enc=$(echo $DESTINATION_PATH | sed 's?/?%%2F?g')
-#link="Link:\nhttps://www.globus.org/app/transfer?origin_id=${SOURCE_ENDPOINT}&origin_path=${source_path_enc}&destination_id=${DESTINATION_ENDPOINT}&destination_path=${destination_path_enc}\n"
-
-# print Submitted sync from $SOURCE_ENDPOINT:$SOURCE_PATH to $DESTINATION_ENDPOINT:$DESTINATION_PATH \n $link
-
-# echo "Saving sync transfer ID to $LAST_TRANSFER_ID_FILE"
-# echo $globus_output | tr -d '"' > "$LAST_TRANSFER_ID_FILE"
-
 if __name__ == '__main__':
     sync()
