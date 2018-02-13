@@ -1,2 +1,2 @@
-MAIL=<your email address>
+MAILTO=<your email address>
 30 1 * * *	$HOME/globus-sync-example/run_globus_sync.sh
