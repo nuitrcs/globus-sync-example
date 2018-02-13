@@ -8,8 +8,8 @@ crontab useful for creating scheduled backups via Globus.
 
 1. **Clone this repository** to wherever you will be using it:
 
-	$ git clone https://github.com/nuitrcs/globus-sync-example.git
-	$ cd globus-sync-example
+		$ git clone https://github.com/nuitrcs/globus-sync-example.git
+		$ cd globus-sync-example
 
 2. **Create an app in Globus.** Visit
    [https://auth.globus.org/v2/web/developers](https://auth.globus.org/v2/web/developers)
@@ -50,10 +50,10 @@ crontab useful for creating scheduled backups via Globus.
 6. **Execute `run_globus_sync.sh`** and authenticate via the given URL, pasting the
    Native App Authorization Code into the terminal.
 
-	$ ./run_globus_sync.sh
-	Native App Authorization URL:
-	https://auth.globus.org/v2/oauth2/authorize?client_id=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&redirect_uri=https%3A%2F%2Fauth.globus.org%2Fv2%2Fweb%2Fauth-code&scope=urn%3Aglobus%3Aauth%3Ascope%3Atransfer.api.globus.org%3Aall&state=_default&response_type=code&code_challenge=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&code_challenge_method=S256&access_type=offline
-	Enter the auth code:
+		$ ./run_globus_sync.sh
+		Native App Authorization URL:
+		https://auth.globus.org/v2/oauth2/authorize?client_id=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&redirect_uri=https%3A%2F%2Fauth.globus.org%2Fv2%2Fweb%2Fauth-code&scope=urn%3Aglobus%3Aauth%3Ascope%3Atransfer.api.globus.org%3Aall&state=_default&response_type=code&code_challenge=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&code_challenge_method=S256&access_type=offline
+		Enter the auth code:
 
    You will copy the Native App Authorization URL and paste it into your
    browser's location bar. Authenticate as normal to Globus, and you will be
@@ -67,6 +67,5 @@ crontab useful for creating scheduled backups via Globus.
    the example `crontab` file with your email address and the correct path to
    `run_globus_sync.sh`. Then, install the file into cron with this command:
 
-	crontab <crontab
-
+		crontab <crontab
 
