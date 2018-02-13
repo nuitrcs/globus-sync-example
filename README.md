@@ -4,7 +4,7 @@ This repository contains a Python script that uses the Globus Auth and Transfer
 APIs to create a transfer task. It also contains an example shell script and
 crontab useful for creating scheduled backups via Globus.
 
-# How To Use This Script
+## How To Use This Script
 
 1. **Clone this repository** to wherever you will be using it:
 
