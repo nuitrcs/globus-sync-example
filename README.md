@@ -59,13 +59,17 @@ crontab useful for creating scheduled backups via Globus.
    browser's location bar. Authenticate as normal to Globus, and you will be
    redirected to a page that displays an authorization code. Copy that
    authorization code and paste it into the "Enter the auth code:" prompt.
+   The script will store the resulting authentication tokens in a file called
+   `.globus-sync-data.json` and they are valid for 48 hours.
 
-   Your transfer will now run in Globus and the authentication token is good
-   for 48 hours.
+   Your transfer will now run in Globus and you can check on its status via the
+   URL shown in your terminal.
 
-7. **Install the script into your crontab to run it every day at 1:30am.** Edit
-   the example `crontab` file with your email address and the correct path to
-   `run_globus_sync.sh`. Then, install the file into cron with this command:
+7. **Install the script into your crontab to run it every day.** Edit the
+   example `crontab` file with your email address and the correct path to
+   `run_globus_sync.sh`. If desired, change the cron expression that controls
+   when the script runs (it defaults to 1:30am every day). Then, install the
+   file into cron with this command:
 
 		crontab <crontab
 
