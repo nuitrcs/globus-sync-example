@@ -4,6 +4,7 @@ import click
 import json
 import os
 import six
+import sys
 
 from globus_sdk import (NativeAppAuthClient, TransferClient,
         RefreshTokenAuthorizer, TransferData)
